@@ -13,7 +13,9 @@ export default class App extends Component {
           <h2 className="meter-value">
             {currencySymbol}{value}
           </h2>
-          <div className="meter-dial"/>
+          <div className="meter-dial">
+            <div className="meter-dial-image"/>
+          </div>
           <div className="meter-scale">
             <div className="meter-scale-min">{currencySymbol}{min}</div>
             <div className="meter-scale-max">{currencySymbol}{max}</div>

@@ -1,7 +1,6 @@
 .meter {
   color: $white;
   background-color: $gray;
-  height: 400px;
   width: 400px;
 
   .meter-value {
@@ -10,12 +9,27 @@
   }
 
   .meter-dial {
-    height: 200px;
+    height: 150px;
+    overflow: hidden;
+
+    .meter-dial-image {
+      height: 300px;
+      width: 300px;
+      border: 20px solid #9da0a4;
+      border-radius: 5000px;
+      margin: 0 auto;
+    }
   }
-  .meter-scale-min {
-    float: left;
-  }
-  .meter-scale-max {
-    float: right;
+  .meter-scale {
+    overflow: auto;
+    padding-top: .5em;
+    font-size: 1.5em;
+
+    .meter-scale-min {
+      float: left;
+    }
+    .meter-scale-max {
+      float: right;
+    }
   }
 }
