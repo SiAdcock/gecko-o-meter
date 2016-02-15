@@ -1,0 +1,21 @@
+.meter {
+  color: $white;
+  background-color: $gray;
+  height: 400px;
+  width: 400px;
+
+  .meter-value {
+    text-align: center;
+    font-size: 5em;
+  }
+
+  .meter-dial {
+    height: 200px;
+  }
+  .meter-scale-min {
+    float: left;
+  }
+  .meter-scale-max {
+    float: right;
+  }
+}
