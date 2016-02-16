@@ -1,0 +1,24 @@
+
+.dial {
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+
+  .dial-image {
+    height: 300px;
+    width: 300px;
+    border: 20px solid $white;
+    border-radius: 5000px;
+    margin: 0 auto;
+  }
+  .dial-arm {
+    height: 150px;
+    width: 10px;
+    position: absolute;
+    top: -10px;
+    left: 160px;
+    background-color: $white;
+    box-sizing: content-box;
+    border: 10px solid $gray;
+  }
+}

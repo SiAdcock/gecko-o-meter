@@ -5,9 +5,9 @@ export default class Scale extends Component {
     const { currencySymbol, min, max } = this.props;
 
     return (
-      <div className="meter-scale">
-        <div className="meter-scale-min">{currencySymbol}{min}</div>
-        <div className="meter-scale-max">{currencySymbol}{max}</div>
+      <div className="scale">
+        <div className="scale-min">{currencySymbol}{min}</div>
+        <div className="scale-max">{currencySymbol}{max}</div>
       </div>
     );
   }
