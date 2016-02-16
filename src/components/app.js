@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import data from '../data/data.json';
 import { currencies } from '../constants';
+import Dial from './dial';
+import Scale from './scale';
 
 export default class App extends Component {
   render() {
     const currencySymbol = currencies[data.unit];
     const { value, min, max } = data;
+
     return (
       <div>
         <h1>Geck-o-meter</h1>
@@ -13,13 +16,8 @@ export default class App extends Component {
           <h2 className="meter-value">
             {currencySymbol}{value}
           </h2>
-          <div className="meter-dial">
-            <div className="meter-dial-image"/>
-          </div>
-          <div className="meter-scale">
-            <div className="meter-scale-min">{currencySymbol}{min}</div>
-            <div className="meter-scale-max">{currencySymbol}{max}</div>
-          </div>
+          <Dial/>
+          <Scale currencySymbol={currencySymbol} min={min} max={max}/>
         </div>
       </div>
     );
