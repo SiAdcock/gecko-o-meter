@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 
 export default class Dial extends Component {
   render() {
-    const rotate = 180;
-    const left = 10;
-    const top = 130;
+    const {rotate, left, top} = this.props;
 
     return (
       <div className="dial">
