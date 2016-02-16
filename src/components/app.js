@@ -5,6 +5,7 @@ import Dial from './dial';
 import Scale from './scale';
 import getRotation from '../lib/getRotation';
 import getTopOffset from '../lib/getTopOffset';
+import getLeftOffset from '../lib/getLeftOffset';
 
 export default class App extends Component {
   render() {
@@ -14,7 +15,7 @@ export default class App extends Component {
     const max = 100;
     const min = 0;
     const rotate = getRotation(value, min, max);
-    const left = 10;
+    const left = getLeftOffset(value, min, max);
     const top = getTopOffset(value, min, max);
 
     return (
