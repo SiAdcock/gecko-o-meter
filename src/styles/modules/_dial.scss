@@ -12,11 +12,9 @@
     margin: 0 auto;
   }
   .dial-arm {
-    height: 150px;
-    width: 10px;
+    height: 10px;
+    width: 150px;
     position: absolute;
-    top: -10px;
-    left: 160px;
     background-color: $white;
     box-sizing: content-box;
     border: 10px solid $gray;
