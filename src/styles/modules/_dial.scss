@@ -12,11 +12,11 @@
     margin: 0 auto;
   }
   .dial-arm {
-    height: 10px;
-    width: 150px;
+    height: 290px;
+    width: 290px;
     position: absolute;
-    background-color: $white;
-    box-sizing: content-box;
-    border: 10px solid $gray;
+    top: 0;
+    left: 25px;
+    background-image: url('/img/dial-arm.png');
   }
 }

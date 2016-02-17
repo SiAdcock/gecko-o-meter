@@ -10,9 +10,7 @@ export default class Dial extends Component {
         <div
           className="dial-arm"
           style={{
-            transform: `rotate(${rotate}deg)`,
-            left: `${left}px`,
-            top: `${top}px`
+            transform: `rotate(${rotate}deg)`
           }}
         />
       </div>
