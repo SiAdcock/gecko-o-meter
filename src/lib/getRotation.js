@@ -8,5 +8,9 @@ export default (value, min, max) => {
     return dial.MAX_ROTATION;
   }
 
-  return value / (max - min) * (dial.MAX_ROTATION - dial.MIN_ROTATION);
+  const absoluteRange = max - min;
+  const absoluteValue = value - min;
+  const absoluteRotation = dial.MAX_ROTATION - dial.MIN_ROTATION;
+
+  return absoluteValue / absoluteRange * absoluteRotation;
 };

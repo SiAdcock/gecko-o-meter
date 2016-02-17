@@ -25,4 +25,12 @@ describe('get rotation', () => {
 
     expect(getRotation(value, min, max)).to.equal(halfwayAroundDial);
   });
+  it('returns quarter of difference between MAX_ROTATION and MIN_ROTATION if value is quarter way between min and max', () => {
+    const value = 225;
+    const min = 200;
+    const max = 300;
+    const quarterWayAroundDial = (dial.MAX_ROTATION - dial.MIN_ROTATION) / 4;
+
+    expect(getRotation(value, min, max)).to.equal(quarterWayAroundDial);
+  });
 });
