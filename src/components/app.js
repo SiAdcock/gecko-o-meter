@@ -1,14 +1,31 @@
 import React, { Component } from 'react';
-import data from '../data/data.json';
+import request from 'superagent';
 import { currencies } from '../constants';
 import Dial from './dial';
 import Scale from './scale';
 import getRotation from '../lib/getRotation';
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 34,
+      min: 0,
+      max: 200,
+      format: 'currency',
+      unit: 'GBP'
+    };
+  }
+  componentWillMount() {
+    request
+      .get('https://widgister.herokuapp.com/challenge/frontend')
+      .end((err, res) => {
+        this.setState(res.body);
+      });
+  }
   render() {
-    const currencySymbol = currencies[data.unit];
-    const { value, min, max } = data;
+    const currencySymbol = currencies[this.state.unit];
+    const { value, min, max } = this.state;
     const rotate = getRotation(value, min, max);
 
     return (
